@@ -45,12 +45,13 @@ function LoginForm() {
         <h1>Login</h1>
       </div>
       <form class="login-form" onSubmit={handleSubmit}>
-        {message && <div>{message}</div>}
         <label htmlFor="username">Email</label>
         <input type="text" id="username" name="username" placeholder="Enter your username" required value={email} onChange={handleEmailChange} />
         <label htmlFor="password">Password</label>
         <input type="password" id="password" name="password" placeholder="Enter your password" required value={password} onChange={handlePasswordChange}/>
         <button type="submit">Login</button>
+        <hr></hr>
+        {message && <div>{message}</div>}
       </form>
     </div>
   );
