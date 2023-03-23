@@ -18,8 +18,12 @@
 
 /* estilos para a página de login */
 body {
+  background-image: url("https://images.impresa.pt/expresso/2023-03-02-_RC03382_ritacarmo.jpg-2c2c012e/original/mw-1920");
   background-color: var(--secondary-color);
   font-family: 'Roboto', sans-serif;
+  background-position: left;
+  background-size: cover;
+  
 }
 
 .login-wrapper {
@@ -28,7 +32,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: var(--tertiary-color);
+  /*background-color: var(--tertiary-color);*/
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
