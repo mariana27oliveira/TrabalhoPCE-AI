@@ -1,7 +1,8 @@
 import './login.css';
 import axios from 'axios';
-
 import React, { useState } from 'react';
+import { redirect, useNavigate} from 'react-router-dom';
+
 
 //const React = require('react');
 //const axios= require('axios');
@@ -10,6 +11,7 @@ function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+  const navigate = useNavigate();
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -29,6 +31,8 @@ function LoginForm() {
       });
       console.log(response.data);
       setMessage('Login Sucessful');
+      navigate('/formulario');
+
     } catch (error) {
       console.error(error);
       if (error.response && error.response.status === 401) {
