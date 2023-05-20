@@ -125,7 +125,7 @@
                         {
                             "system": "http://snomed.info/sct",
                             "code": "268400002",
-                            "display": "12 lead electrocardiogram "
+                            "display": "12 lead electrocardiogram"
                         },
                         {
                             "system": "https://www.acss.min-saude.pt/category/prestadores/convencionados/#tab_tabelas-meios-complementaresde-diagnostico-e-terapeutica","code": "40301",
