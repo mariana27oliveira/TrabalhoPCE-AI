@@ -1,5 +1,5 @@
 const fhir = require("../model/messageFHIR")
-let FhirSchema = require ("../model/messageFHIR")
+let MessageFHIRSchema = require ("../model/messageFHIR")
 
 module.exports.newMessageFHIR = async(fhir) => {
     try {
