@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 var app = express();
 const bodyParser = require('body-parser'); 
+var CompositionController = require ('../controller/composition');
+
 
 module.exports = router;
 
@@ -41,6 +43,17 @@ router.post('/login', (req, res) => {
       password: 'letmein'
     }
   ];
+
+  router.post("/newcomposition", async (req, res) => {
+    console.log(req.body)
+    let newCompositionResponse = await CompositionController.newComposition(req.body.data);
+    console.log('newCompositionResponse',newCompositionResponse)
+      if(newCompositionResponse.Success) { res.status(200).json({success: true, info: "Composition added successfully"});
+      }else{
+        res.status(200).json({ success: false, info: "Composition not added"});
+    }
+  })
+  
 
 app.use(router);
 

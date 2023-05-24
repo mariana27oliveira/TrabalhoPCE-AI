@@ -6,19 +6,18 @@ import './style_imagem.json';
 let json = require('./jdt_imagem.json');
 
 
-onSubmit = async (values) => {
-  try {
-    const response = await axios.post('/newcomposition', values);
-    console.log('POST request successful:', response.data);
-    alert('Composition submitted successfully!');
-  } catch (error) {
-    console.error('Error submitting composition:', error);
-    alert('Error submitting composition. Please try again.');
-  }
-};
-
 
 const Forms = () => {
+  const onSubmit = async (values) => {
+    try {
+      const response = await axios.post('http://localhost:8080/composition/newcomposition', values);
+      console.log('POST request successful:', response.data);
+      alert('Composition submitted successfully!');
+    } catch (error) {
+      console.error('Error submitting composition:', error);
+      alert('Error submitting composition. Please try again.');
+    }
+  };
   return (
     <div className="Form">
       <Form
