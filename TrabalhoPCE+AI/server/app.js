@@ -4,8 +4,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors')
 
-var loginRouter = require('./routes/login.js');
-var compositionRouter = require('./routes/composition.js');
+var rotas = require('./routes/routesFile.js');
 
 const mongoose = require('mongoose');
 const uri = "mongodb://localhost:9000/composition";
@@ -23,8 +22,8 @@ app.use(express.urlencoded({limit: "50mb", extended: true, parameterLimit:50000}
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', loginRouter);
-app.use('/composition', compositionRouter);
+
+app.use('/', rotas);
 
 
 module.exports = app;

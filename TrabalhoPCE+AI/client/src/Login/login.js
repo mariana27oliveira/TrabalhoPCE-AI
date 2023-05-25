@@ -4,9 +4,6 @@ import React, { useState } from 'react';
 import { redirect, useNavigate} from 'react-router-dom';
 
 
-//const React = require('react');
-//const axios= require('axios');
-
 function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -23,13 +20,11 @@ function LoginForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log('cheguei')
     try {
       const response = await axios.post('http://localhost:8080/login', {
         email: email,
         password: password
       });
-      console.log(response.data);
       setMessage('Login Sucessful');
       navigate('/formulario');
 
@@ -38,7 +33,7 @@ function LoginForm() {
       if (error.response && error.response.status === 401) {
         setMessage('Invalid email or password');
       } else {
-        setMessage('Todos os campos têm de ser preenchidos');
+        setMessage('All fields must be filled');
       }
     }
   };
