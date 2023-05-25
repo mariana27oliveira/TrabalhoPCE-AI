@@ -1,8 +1,7 @@
 import './login.css';
 import axios from 'axios';
 import React, { useState } from 'react';
-import { redirect, useNavigate} from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 
 function LoginForm() {
   const [email, setEmail] = useState('');
@@ -25,29 +24,28 @@ function LoginForm() {
         email: email,
         password: password
       });
-      setMessage('Login Sucessful');
-      navigate('/formulario');
-
+      if (response.data.success) {
+        setMessage('Login Successful');
+        navigate('/formulario');
+      } else {
+        setMessage(response.data.info);
+      }
     } catch (error) {
       console.error(error);
-      if (error.response && error.response.status === 401) {
-        setMessage('Invalid email or password');
-      } else {
-        setMessage('All fields must be filled');
-      }
+      setMessage('An error occurred');
     }
   };
 
   return (
-    <div class="login-wrapper">
-      <div class="login-header">
+    <div className="login-wrapper">
+      <div className="login-header">
         <h1>Login</h1>
       </div>
-      <form class="login-form" onSubmit={handleSubmit}>
+      <form className="login-form" onSubmit={handleSubmit}>
         <label htmlFor="username">Email</label>
-        <input type="text" id="username" name="username" placeholder="Enter your username" required value={email} onChange={handleEmailChange} />
+        <input type="text" id="email" name="email" placeholder="Enter your email" required value={email} onChange={handleEmailChange} />
         <label htmlFor="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password" required value={password} onChange={handlePasswordChange}/>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required value={password} onChange={handlePasswordChange} />
         <button type="submit">Login</button>
         <hr></hr>
         {message && <div>{message}</div>}
@@ -55,6 +53,5 @@ function LoginForm() {
     </div>
   );
 }
-
 
 export default LoginForm;

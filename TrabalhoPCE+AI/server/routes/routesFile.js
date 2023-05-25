@@ -15,17 +15,19 @@ router.use(bodyParser.json());
 
 
 router.post('/login', async (req, res) => {
-    const { email, password } = req.body;
-    if (!email || !password) {
-      res.status(400);
-    }
+  const { email, password } = req.body;
+  if (!email || !password) {
+    return res.status(400).json({ success: false, info: 'Email and password are required.' });
+  }
 
-    let loginResponse = await LoginController.login(email, password);
-      if(loginResponse.Success) { res.status(200).json({success: true, info: "Login successfull."});
-      }else{
-        res.status(200).json({ success: false, info: "User not verified."});
-    }
-  });
+  let loginResponse = await LoginController.login(email, password);
+  if (loginResponse.success) {
+    res.status(200).json({ success: true, info: 'Login successful.' });
+  } else {
+    res.status(401).json({ success: false, info: 'Invalid email or password.' });
+  }
+});
+
 
 
   router.post('/signIn', async (req, res) => {
