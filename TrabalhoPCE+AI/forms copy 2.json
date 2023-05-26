@@ -69,10 +69,10 @@
                 ],
                 "name": [
                     {
-                        "text": "items.0.2.items.0.items.0.value"
+                        "text": "items.0.2.items.0.items.0.value.text"
                     }
                 ],
-                "gender": "items.0.2.items.0.items.1.value",
+                "gender": "items.0.2.items.0.items.1.value.text",
                 "birthDate": "1970-01-01",
                 "address": [
                     {

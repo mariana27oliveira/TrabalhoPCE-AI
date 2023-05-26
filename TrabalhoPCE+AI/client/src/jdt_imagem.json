@@ -33,14 +33,6 @@
           "TaskVisible": [
             "All"
           ],
-          "dataType": "DV_TEXT",
-          "itemName": "Report ID",
-          "itemPath": "items.0.0",
-          "node": {
-            "code": "at0002",
-            "description": "Identification information about the report.",
-            "text": "Report ID"
-          },
           "occurrences": {
             "lowerOccurrences": 0,
             "upperOccurrences": 1
@@ -63,14 +55,6 @@
           "TaskVisible": [
             "All"
           ],
-          "dataType": "DV_TEXT",
-          "itemName": "Status",
-          "itemPath": "items.0.1",
-          "node": {
-            "code": "at0005",
-            "description": "The status of the entire report. Note: This is not the status of any of the report components.",
-            "text": "Status"
-          },
           "occurrences": {
             "lowerOccurrences": 0,
             "upperOccurrences": 1
@@ -165,19 +149,19 @@
                   "itemsList": [
                     {
                       "code": "local_terms::female",
-                      "text": "female"
+                      "text": "feminino"
                     },
                     {
                       "code": "local_terms::male",
-                      "text": "male"
+                      "text": "masculino"
                     },
                     {
                       "code": "local_terms::unknown",
-                      "text": "unknown"
+                      "text": "desconhecido"
                     },
                     {
                       "code": "local_terms::other",
-                      "text": "other"
+                      "text": "outro"
                     }
                   ],
                   "node": {
@@ -248,7 +232,7 @@
                     "unique": false
                   },
                   "data_type": "Title",
-                  "itemName": "Address",
+                  "itemName": "Endereço",
                   "itemPath": "items.0.2.items.0.items.3",
                   "items": [
                     {
@@ -265,7 +249,7 @@
                         "All"
                       ],
                       "dataType": "DV_TEXT",
-                      "itemName": "Address line",
+                      "itemName": "Endereço",
                       "itemPath": "items.0.2.items.0.items.3.items.0",
                       "node": {
                         "code": "at0001",
@@ -636,7 +620,7 @@
                 "All"
               ],
               "dataType": "DV_CODED_TEXT",
-              "itemName": "Código",
+              "itemName": "Método",
               "itemPath": "items.0.3.items.2",
               "itemsList": [
                 {
@@ -803,7 +787,7 @@
               "node": {
                 "code": "at0065",
                 "description": "Identification of specific method or technique for the procedure.",
-                "text": "Código"
+                "text": "Método"
               },
               "occurrences": {
                 "lowerOccurrences": 0,
@@ -831,39 +815,9 @@
               ],
               "archetype_id": "openEHR-EHR-CLUSTER.person.v1",
               "data_type": "Title",
-              "itemName": "Função",
+              "itemName": "Profissional de Saúde",
               "itemPath": "items.0.3.items.3",
               "items": [
-                {
-                  "Functions": [],
-                  "InternalFunctions": [],
-                  "Refset": [],
-                  "TaskEditable": [
-                    "All"
-                  ],
-                  "TaskInReport": [
-                    "All"
-                  ],
-                  "TaskVisible": [
-                    "All"
-                  ],
-                  "dataType": "DV_TEXT",
-                  "itemName": "Identificador",
-                  "itemPath": "items.0.3.items.3.items.0",
-                  "node": {
-                    "code": "at0003",
-                    "description": "Identifier associated with the individual.",
-                    "text": "Identificador"
-                  },
-                  "occurrences": {
-                    "lowerOccurrences": 0,
-                    "upperOccurrences": 1
-                  },
-                  "path": "[openEHR-EHR-COMPOSITION.report-result.v1]/[openEHR-EHR-ACTION.procedure.v1]/[openEHR-EHR-CLUSTER.person.v1]/[at0003]",
-                  "ruleMandatory": [],
-                  "ruleVisibility": [],
-                  "value": null
-                },
                 {
                   "Functions": [],
                   "InternalFunctions": [],
@@ -893,68 +847,6 @@
                   "ruleMandatory": [],
                   "ruleVisibility": [],
                   "value": null
-                }
-              ],
-              "node": {
-                "code": "at0000",
-                "description": "An individual human being.",
-                "text": "Função"
-              },
-              "occurrences": {
-                "lowerOccurrences": 0,
-                "upperOccurrences": 1
-              },
-              "path": "[openEHR-EHR-COMPOSITION.report-result.v1]/[openEHR-EHR-ACTION.procedure.v1]/[openEHR-EHR-CLUSTER.person.v1]",
-              "ruleMandatory": [],
-              "ruleVisibility": []
-            },
-            {
-              "Functions": [],
-              "InternalFunctions": [],
-              "Refset": [],
-              "TaskEditable": [
-                "All"
-              ],
-              "TaskInReport": [
-                "All"
-              ],
-              "TaskVisible": [
-                "All"
-              ],
-              "archetype_id": "openEHR-EHR-CLUSTER.person.v1",
-              "data_type": "Title",
-              "itemName": "Actor(doctor)",
-              "itemPath": "items.0.3.items.4",
-              "items": [
-                {
-                  "Functions": [],
-                  "InternalFunctions": [],
-                  "Refset": [],
-                  "TaskEditable": [
-                    "All"
-                  ],
-                  "TaskInReport": [
-                    "All"
-                  ],
-                  "TaskVisible": [
-                    "All"
-                  ],
-                  "dataType": "DV_TEXT",
-                  "itemName": "Nome(display)",
-                  "itemPath": "items.0.3.items.4.items.0",
-                  "node": {
-                    "code": "at0001",
-                    "description": "The unstructured name for the individual.",
-                    "text": "Nome(display)"
-                  },
-                  "occurrences": {
-                    "lowerOccurrences": 0,
-                    "upperOccurrences": 1
-                  },
-                  "path": "[openEHR-EHR-COMPOSITION.report-result.v1]/[openEHR-EHR-ACTION.procedure.v1]/[openEHR-EHR-CLUSTER.person.v1]/[at0001]",
-                  "ruleMandatory": [],
-                  "ruleVisibility": [],
-                  "value": null
                 },
                 {
                   "Functions": [],
@@ -975,7 +867,7 @@
                   "node": {
                     "code": "at0003",
                     "description": "Identifier associated with the individual.",
-                    "text": "Identificador(Reference)"
+                    "text": "Identificador"
                   },
                   "occurrences": {
                     "lowerOccurrences": 0,
@@ -986,11 +878,12 @@
                   "ruleVisibility": [],
                   "value": null
                 }
+                
               ],
               "node": {
                 "code": "at0000",
                 "description": "An individual human being.",
-                "text": "Actor(doctor)"
+                "text": "Profissional de Saúde"
               },
               "occurrences": {
                 "lowerOccurrences": 0,
@@ -1015,7 +908,7 @@
               ],
               "archetype_id": "openEHR-EHR-CLUSTER.organisation.v1",
               "data_type": "Title",
-              "itemName": "Actor(org)",
+              "itemName": "Instituição",
               "itemPath": "items.0.3.items.5",
               "items": [
                 {
@@ -1037,7 +930,7 @@
                   "node": {
                     "code": "at0001",
                     "description": "The unstructured name or label for the organisation.",
-                    "text": "Display"
+                    "text": "Nome"
                   },
                   "occurrences": {
                     "lowerOccurrences": 0,
@@ -1062,12 +955,12 @@
                     "All"
                   ],
                   "dataType": "DV_TEXT",
-                  "itemName": "Reference",
+                  "itemName": "Identificador da Organização",
                   "itemPath": "items.0.3.items.5.items.1",
                   "node": {
                     "code": "at0003",
                     "description": "Identifier associated with the organisation.",
-                    "text": "Reference"
+                    "text": "Identificador da Organização"
                   },
                   "occurrences": {
                     "lowerOccurrences": 0,
@@ -1082,7 +975,7 @@
               "node": {
                 "code": "at0000",
                 "description": "An entity comprising one or more people and having a particular purpose.",
-                "text": "Actor(org)"
+                "text": "Instituição"
               },
               "occurrences": {
                 "lowerOccurrences": 0,
