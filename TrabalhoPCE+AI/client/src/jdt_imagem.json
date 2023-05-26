@@ -79,7 +79,7 @@
           ],
           "archetype_id": "openEHR-EHR-ADMIN_ENTRY.demographics.v0",
           "data_type": "Title",
-          "itemName": "Informação demográfica",
+          "itemName": "Informação do",
           "itemPath": "items.0.2",
           "items": [
             {
@@ -254,7 +254,7 @@
                       "node": {
                         "code": "at0001",
                         "description": "An unstructured address line representing all relevant street-level or post-box details that would support the identification of a location.",
-                        "text": "Address line"
+                        "text": "Endereço"
                       },
                       "occurrences": {
                         "lowerOccurrences": 0,
@@ -269,16 +269,18 @@
                   "node": {
                     "code": "at0000",
                     "description": "Details about the location of a person, physical building or landmark.",
-                    "text": "Address"
+                    "text": "Endereço"
                   },
                   "occurrences": {
                     "lowerOccurrences": 0,
                     "upperOccurrences": 1
                   },
+                  
                   "path": "[openEHR-EHR-COMPOSITION.report-result.v1]/[openEHR-EHR-ADMIN_ENTRY.demographics.v0]/[openEHR-EHR-CLUSTER.person.v1]/[openEHR-EHR-CLUSTER.address.v1]",
                   "ruleMandatory": [],
                   "ruleVisibility": []
                 }
+                
               ],
               "node": {
                 "code": "at0000",
@@ -297,7 +299,7 @@
           "node": {
             "code": "at0000",
             "description": "A container archetype used to hold demographic-related EHR CLUSTER archetypes.",
-            "text": "Informação demográfica"
+            "text": "Informação do Paciente"
           },
           "occurrences": {
             "lowerOccurrences": 0,
@@ -879,6 +881,7 @@
                   "value": null
                 }
                 
+                
               ],
               "node": {
                 "code": "at0000",
@@ -1061,460 +1064,8 @@
               "TaskVisible": [
                 "All"
               ],
-              "dataType": "DV_CODED_TEXT",
-              "itemName": "Categoria",
-              "itemPath": "items.0.4.items.0",
-              "itemsList": [
-                {
-                  "code": "local_terms::AU",
-                  "text": "Audiology"
-                },
-                {
-                  "code": "local_terms::BG",
-                  "text": "Blood Gases"
-                },
-                {
-                  "code": "local_terms::BLB",
-                  "text": "Blood Bank"
-                },
-                {
-                  "code": "local_terms::CG",
-                  "text": "Cytogenetics"
-                },
-                {
-                  "code": "local_terms::CH",
-                  "text": "Chemistry"
-                },
-                {
-                  "code": "local_terms::CP",
-                  "text": "Cytopathology"
-                },
-                {
-                  "code": "local_terms::CT",
-                  "text": "CAT Scan"
-                },
-                {
-                  "code": "local_terms::CTH",
-                  "text": "Cardiac Catheterization"
-                },
-                {
-                  "code": "local_terms::CUS",
-                  "text": "Cardiac Ultrasound"
-                },
-                {
-                  "code": "local_terms::EC",
-                  "text": "Electrocardiac (e.g. EKG, EEC, Holter)"
-                },
-                {
-                  "code": "local_terms::EN",
-                  "text": "Electroneuro (EEG, EMG,EP,PSG)"
-                },
-                {
-                  "code": "local_terms::GE",
-                  "text": "Genetics"
-                },
-                {
-                  "code": "local_terms::HM",
-                  "text": "Hematology"
-                },
-                {
-                  "code": "local_terms::ICU",
-                  "text": "Bedside ICU Monitoring"
-                },
-                {
-                  "code": "local_terms::IMG",
-                  "text": "Diagnostic Imaging"
-                },
-                {
-                  "code": "local_terms::IMM",
-                  "text": "Immunology"
-                },
-                {
-                  "code": "local_terms::LAB",
-                  "text": "Laboratory"
-                },
-                {
-                  "code": "local_terms::MB",
-                  "text": "Microbiology"
-                },
-                {
-                  "code": "local_terms::MCB",
-                  "text": "Mycobacteriology"
-                },
-                {
-                  "code": "local_terms::MYC",
-                  "text": "Mycology"
-                },
-                {
-                  "code": "local_terms::NMR",
-                  "text": "Nuclear Magnetic Resonance"
-                },
-                {
-                  "code": "local_terms::NMS",
-                  "text": "Nuclear Medicine Scan"
-                },
-                {
-                  "code": "local_terms::NRS",
-                  "text": "Nursing Service Measures"
-                },
-                {
-                  "code": "local_terms::OSL",
-                  "text": "Outside Lab"
-                },
-                {
-                  "code": "local_terms::OT",
-                  "text": "Occupational Therapy"
-                },
-                {
-                  "code": "local_terms::OTH",
-                  "text": "Other"
-                },
-                {
-                  "code": "local_terms::OUS",
-                  "text": "OB Ultrasound"
-                },
-                {
-                  "code": "local_terms::PAR",
-                  "text": "Parasitology"
-                },
-                {
-                  "code": "local_terms::PAT",
-                  "text": "Pathology (gross & histopath, not surgical)"
-                },
-                {
-                  "code": "local_terms::PF",
-                  "text": "Pulmonary Function"
-                },
-                {
-                  "code": "local_terms::PHR",
-                  "text": "Pharmacy"
-                },
-                {
-                  "code": "local_terms::PHY",
-                  "text": "Physician (Hx. Dx, admission note, etc.)"
-                },
-                {
-                  "code": "local_terms::PT",
-                  "text": "Physical Therapy"
-                },
-                {
-                  "code": "local_terms::RAD",
-                  "text": "Radiology"
-                },
-                {
-                  "code": "local_terms::RC",
-                  "text": "Respiratory Care (therapy)"
-                },
-                {
-                  "code": "local_terms::RT",
-                  "text": "Radiation Therapy"
-                },
-                {
-                  "code": "local_terms::RUS",
-                  "text": "Radiology Ultrasound"
-                },
-                {
-                  "code": "local_terms::RX",
-                  "text": "Radiograph"
-                },
-                {
-                  "code": "local_terms::SP",
-                  "text": "Surgical Pathology"
-                },
-                {
-                  "code": "local_terms::SR",
-                  "text": "Serology"
-                },
-                {
-                  "code": "local_terms::TX",
-                  "text": "Toxicology"
-                },
-                {
-                  "code": "local_terms::URN",
-                  "text": "Urinalysis"
-                },
-                {
-                  "code": "local_terms::VR",
-                  "text": "Virology"
-                },
-                {
-                  "code": "local_terms::VUS",
-                  "text": "Vascular Ultrasound"
-                },
-                {
-                  "code": "local_terms::XRC",
-                  "text": "Cineradiograph"
-                }
-              ],
-              "node": {
-                "code": "at0002",
-                "description": "Identification of the procedure by name.",
-                "text": "Categoria"
-              },
-              "occurrences": {
-                "lowerOccurrences": 1,
-                "upperOccurrences": 1
-              },
-              "path": "[openEHR-EHR-COMPOSITION.report-result.v1]/[openEHR-EHR-ACTION.procedure.v1]/[at0002]",
-              "ruleMandatory": [],
-              "ruleVisibility": [],
-              "terminology": "local_terms",
-              "terminology_id": "local_terms",
-              "value": null
-            },
-            {
-              "Functions": [],
-              "InternalFunctions": [],
-              "Refset": [],
-              "TaskEditable": [
-                "All"
-              ],
-              "TaskInReport": [
-                "All"
-              ],
-              "TaskVisible": [
-                "All"
-              ],
-              "dataType": "DV_CODED_TEXT",
-              "itemName": "Status",
-              "itemPath": "items.0.4.items.1",
-              "itemsList": [
-                {
-                  "code": "local_terms::registered",
-                  "text": "Registered"
-                },
-                {
-                  "code": "local_terms::preliminary",
-                  "text": "Preliminary"
-                },
-                {
-                  "code": "local_terms::final",
-                  "text": "Final"
-                },
-                {
-                  "code": "local_terms::amended",
-                  "text": "Amended"
-                },
-                {
-                  "code": "local_terms::corrected",
-                  "text": "Corrected"
-                },
-                {
-                  "code": "local_terms::cancelled",
-                  "text": "Cancelled"
-                },
-                {
-                  "code": "local_terms::entered-in-error",
-                  "text": "Entered in Error"
-                },
-                {
-                  "code": "local_terms::unknown",
-                  "text": "Unknown"
-                }
-              ],
-              "node": {
-                "code": "at0070",
-                "description": "The clinical or process-related reason for the procedure.",
-                "text": "Status"
-              },
-              "occurrences": {
-                "lowerOccurrences": 0,
-                "upperOccurrences": "*"
-              },
-              "path": "[openEHR-EHR-COMPOSITION.report-result.v1]/[openEHR-EHR-ACTION.procedure.v1]/[at0070]",
-              "ruleMandatory": [],
-              "ruleVisibility": [],
-              "terminology": "local_terms",
-              "terminology_id": "local_terms",
-              "value": null
-            },
-            {
-              "Functions": [],
-              "InternalFunctions": [],
-              "Refset": [],
-              "TaskEditable": [
-                "All"
-              ],
-              "TaskInReport": [
-                "All"
-              ],
-              "TaskVisible": [
-                "All"
-              ],
-              "dataType": "DV_CODED_TEXT",
-              "itemName": "Código",
-              "itemPath": "items.0.4.items.2",
-              "itemsList": [
-                {
-                  "code": "local_terms::40301",
-                  "text": "ECG simples de 12 derivações"
-                },
-                {
-                  "code": "local_terms::40315",
-                  "text": "Prova de esforço em bicicleta ergométrica ou em tapete rolante com monitorização eletrocardiográfica contínua, registo de ECG em cada estadio"
-                },
-                {
-                  "code": "local_terms::40405",
-                  "text": "Registo de Holter até 24 horas com análise interativa do perfil rítmico e do segmento ST, podendo incluir variabilidade da frequência cardíaca"
-                },
-                {
-                  "code": "local_terms::40560",
-                  "text": "Ecocardiograma transtorácico bidimensional"
-                },
-                {
-                  "code": "local_terms::41020",
-                  "text": "Análise electrónica e programação de sistema pacemaker permanente"
-                },
-                {
-                  "code": "local_terms::52175",
-                  "text": "Biopsias transendoscópicas (acresce ao valor da endoscopia)"
-                },
-                {
-                  "code": "local_terms::52071",
-                  "text": "Pesquisa de Helicobacter pylori na biópsia (Teste de Urease)"
-                },
-                {
-                  "code": "local_terms::50115",
-                  "text": "Sedação efectuada por Gastrenterologista"
-                },
-                {
-                  "code": "local_terms::51120",
-                  "text": "Tatuagem cólica"
-                },
-                {
-                  "code": "local_terms::52155",
-                  "text": "Aplicação de \"clips\" (cada sessão)"
-                },
-                {
-                  "code": "local_terms::52210",
-                  "text": "Injecção endoscópica de fármacos"
-                },
-                {
-                  "code": "local_terms::52220",
-                  "text": "Polipectomia, por sessão (a adicionar ao exame endoscópico)"
-                },
-                {
-                  "code": "local_terms::52230",
-                  "text": "Terapêutica por Argon Plasma"
-                },
-                {
-                  "code": "local_terms::51280",
-                  "text": "Anuscopia"
-                },
-                {
-                  "code": "local_terms::52125",
-                  "text": "Endoscopia alta"
-                },
-                {
-                  "code": "local_terms::52130",
-                  "text": "Rectoscopia rígida"
-                },
-                {
-                  "code": "local_terms::52270",
-                  "text": "Rectosigmoidoscopia flexível"
-                },
-                {
-                  "code": "local_terms::80010",
-                  "text": "Espirometria, incluindo curva débito volume"
-                },
-                {
-                  "code": "local_terms::80040",
-                  "text": "Capacidade residual funcional ou volume residual (hélio/azoto)"
-                },
-                {
-                  "code": "local_terms::80100",
-                  "text": "Pletismografia corporal: estudo da resistência das vias aéreas e volume de gás intratorácico"
-                },
-                {
-                  "code": "local_terms::80110",
-                  "text": "Prova de broncodilatação (acresce à prova basal)"
-                },
-                {
-                  "code": "local_terms::80115",
-                  "text": "Prova de broncoconstrição com água destilada/soluto hipertónico (acresce à prova basal)"
-                },
-                {
-                  "code": "local_terms::80117",
-                  "text": "Prova de broncoconstrição de esforço, com bicicleta ou tapete rolante (acresce à prova basal)"
-                },
-                {
-                  "code": "local_terms::80121",
-                  "text": "Prova de broncoconstrição com metacolina (acresce à prova basal)"
-                },
-                {
-                  "code": "local_terms::80130",
-                  "text": "Prova de broncoconstrição específica com alergénios (acresce à prova basal)"
-                },
-                {
-                  "code": "local_terms::80160",
-                  "text": "Capacidade de difusão do CO por respiração única"
-                },
-                {
-                  "code": "local_terms::80170",
-                  "text": "Capacidade de difusão do CO por equilíbrio estável"
-                },
-                {
-                  "code": "local_terms::80200",
-                  "text": "Prova de exercício com avaliação de parâmetros cardio-respiratórios em tapete rolante ou bicicleta ergonómica"
-                },
-                {
-                  "code": "local_terms::81261",
-                  "text": "Ventilação com pressão positiva contínua (CPAP), por cada dia (inclui oximetria)"
-                },
-                {
-                  "code": "local_terms::81262",
-                  "text": "Ventilação com pressão positiva contínua (Binível ou outra modalidade), por cada dia (inclui oximetria)"
-                },
-                {
-                  "code": "local_terms::81263",
-                  "text": "Adaptação e aferição a ventilação com pressão positiva contínua (CPAP) (incluí oximetria e gasimetria)"
-                },
-                {
-                  "code": "local_terms::81264",
-                  "text": "Adaptação e aferição a ventilação com pressão positiva contínua (Binível ou outra modalidade) (incluí oximetria e gasimetria)"
-                },
-                {
-                  "code": "local_terms::81920",
-                  "text": "Broncoscopia rígida"
-                },
-                {
-                  "code": "local_terms::81925",
-                  "text": "Broncofibroscopia"
-                },
-                {
-                  "code": "local_terms::81927",
-                  "text": "Vídeobroncofibroscopia"
-                },
-                {
-                  "code": "local_terms::81900",
-                  "text": "Toracoscopia"
-                },
-                {
-                  "code": "local_terms::81957",
-                  "text": "Biópsia pulmonar transbrônquica"
-                },
-                {
-                  "code": "local_terms::81971",
-                  "text": "Biópsia pulmonar por toracoscopia"
-                },
-                {
-                  "code": "local_terms::81099",
-                  "text": "Biópsia por punção - tru-cut (acresce apoio de fluoroscopia, ecografia, tomografia - ver tabela de Radiologia)"
-                },
-                {
-                  "code": "local_terms::81972",
-                  "text": "Biópsia pleural por toracoscopia"
-                }
-              ],
-              "node": {
-                "code": "at0065",
-                "description": "Identification of specific method or technique for the procedure.",
-                "text": "Código"
-              },
-              "occurrences": {
-                "lowerOccurrences": 0,
-                "upperOccurrences": "*"
-              },
+              
+              
               "path": "[openEHR-EHR-COMPOSITION.report-result.v1]/[openEHR-EHR-ACTION.procedure.v1]/[at0065]",
               "ruleMandatory": [],
               "ruleVisibility": [],
@@ -1718,18 +1269,7 @@
               "TaskVisible": [
                 "All"
               ],
-              "dataType": "DV_TEXT",
-              "itemName": "Médico(Performer)",
-              "itemPath": "items.0.4.items.4",
-              "node": {
-                "code": "at0056",
-                "description": "The ID assigned to the order by the healthcare provider or organisation receiving the request for service. This is also referred to as Filler Order Identifier.",
-                "text": "Médico(Performer)"
-              },
-              "occurrences": {
-                "lowerOccurrences": 0,
-                "upperOccurrences": 1
-              },
+              
               "path": "[openEHR-EHR-COMPOSITION.report-result.v1]/[openEHR-EHR-ACTION.procedure.v1]/[at0056]",
               "ruleMandatory": [],
               "ruleVisibility": [],
@@ -1799,19 +1339,8 @@
                   "TaskVisible": [
                     "All"
                   ],
-                  "dataType": "DV_TEXT",
-                  "itemName": "Nome",
-                  "itemPath": "items.0.5.items.0.items.0",
-                  "node": {
-                    "code": "at0001",
-                    "description": "The unstructured name for the individual.",
-                    "text": "Nome"
-                  },
-                  "occurrences": {
-                    "lowerOccurrences": 0,
-                    "upperOccurrences": 1
-                  },
-                  "path": "[openEHR-EHR-COMPOSITION.report-result.v1]/[openEHR-EHR-ADMIN_ENTRY.demographics.v0]/[openEHR-EHR-CLUSTER.person.v1]/[at0001]",
+                  
+                  "path": "[openEHR-EHR-COMPOSITION.report-result.v1]/[openEHR-EHR-ADMIN_ENTRY.demographics.v0]/[openEHR-EHR-CLUSTER.person.v1]/[at0003]",
                   "ruleMandatory": [],
                   "ruleVisibility": [],
                   "value": null
@@ -1829,34 +1358,6 @@
                   "TaskVisible": [
                     "All"
                   ],
-                  "dataType": "DV_TEXT",
-                  "itemName": "Número do Profissional",
-                  "itemPath": "items.0.5.items.0.items.1",
-                  "node": {
-                    "code": "at0003",
-                    "description": "Identifier associated with the individual.",
-                    "text": "Número do Profissional"
-                  },
-                  "occurrences": {
-                    "lowerOccurrences": 0,
-                    "upperOccurrences": 1
-                  },
-                  "path": "[openEHR-EHR-COMPOSITION.report-result.v1]/[openEHR-EHR-ADMIN_ENTRY.demographics.v0]/[openEHR-EHR-CLUSTER.person.v1]/[at0003]",
-                  "ruleMandatory": [],
-                  "ruleVisibility": [],
-                  "value": null
-                },
-                {
-                  "Functions": [],
-                  "InternalFunctions": [],
-                  "Refset": [],
-                  "TaskEditable": [
-                    "All"
-                  ],
-                  "TaskInReport": [
-                    "All"
-                  ],
-                  "TaskVisible": [],
                   "dataType": "DV_CODED_TEXT",
                   "itemName": "Código da licença",
                   "itemPath": "items.0.5.items.0.items.2",
@@ -2149,173 +1650,7 @@
               "TaskVisible": [
                 "All"
               ],
-              "archetype_id": "openEHR-EHR-CLUSTER.organisation.v1",
-              "data_type": "Title",
-              "itemName": "Instituição envolvida (sender)",
-              "itemPath": "items.0.5.items.1",
-              "items": [
-                {
-                  "Functions": [],
-                  "InternalFunctions": [],
-                  "Refset": [],
-                  "TaskEditable": [
-                    "All"
-                  ],
-                  "TaskInReport": [
-                    "All"
-                  ],
-                  "TaskVisible": [
-                    "All"
-                  ],
-                  "dataType": "DV_TEXT",
-                  "itemName": "Nome",
-                  "itemPath": "items.0.5.items.1.items.0",
-                  "node": {
-                    "code": "at0001",
-                    "description": "The unstructured name or label for the organisation.",
-                    "text": "Nome"
-                  },
-                  "occurrences": {
-                    "lowerOccurrences": 0,
-                    "upperOccurrences": 1
-                  },
-                  "path": "[openEHR-EHR-COMPOSITION.report-result.v1]/[openEHR-EHR-ADMIN_ENTRY.demographics.v0]/[openEHR-EHR-CLUSTER.organisation.v1]/[at0001]",
-                  "ruleMandatory": [],
-                  "ruleVisibility": [],
-                  "value": null
-                },
-                {
-                  "Functions": [],
-                  "InternalFunctions": [],
-                  "Refset": [],
-                  "TaskEditable": [
-                    "All"
-                  ],
-                  "TaskInReport": [
-                    "All"
-                  ],
-                  "TaskVisible": [
-                    "All"
-                  ],
-                  "dataType": "DV_TEXT",
-                  "itemName": "Id da Instituição",
-                  "itemPath": "items.0.5.items.1.items.1",
-                  "node": {
-                    "code": "at0003",
-                    "description": "Identifier associated with the organisation.",
-                    "text": "Id da Instituição"
-                  },
-                  "occurrences": {
-                    "lowerOccurrences": 0,
-                    "upperOccurrences": 1
-                  },
-                  "path": "[openEHR-EHR-COMPOSITION.report-result.v1]/[openEHR-EHR-ADMIN_ENTRY.demographics.v0]/[openEHR-EHR-CLUSTER.organisation.v1]/[at0003]",
-                  "ruleMandatory": [],
-                  "ruleVisibility": [],
-                  "value": null
-                }
-              ],
-              "node": {
-                "code": "at0000",
-                "description": "An entity comprising one or more people and having a particular purpose.",
-                "text": "Instituição envolvida (sender)"
-              },
-              "occurrences": {
-                "lowerOccurrences": 0,
-                "upperOccurrences": 1
-              },
-              "path": "[openEHR-EHR-COMPOSITION.report-result.v1]/[openEHR-EHR-ADMIN_ENTRY.demographics.v0]/[openEHR-EHR-CLUSTER.organisation.v1]",
-              "ruleMandatory": [],
-              "ruleVisibility": []
-            },
-            {
-              "Functions": [],
-              "InternalFunctions": [],
-              "Refset": [],
-              "TaskEditable": [
-                "All"
-              ],
-              "TaskInReport": [
-                "All"
-              ],
-              "TaskVisible": [
-                "All"
-              ],
-              "archetype_id": "openEHR-EHR-CLUSTER.organisation.v1",
-              "data_type": "Title",
-              "itemName": "Instituição envolvida (receiver)",
-              "itemPath": "items.0.5.items.2",
-              "items": [
-                {
-                  "Functions": [],
-                  "InternalFunctions": [],
-                  "Refset": [],
-                  "TaskEditable": [
-                    "All"
-                  ],
-                  "TaskInReport": [
-                    "All"
-                  ],
-                  "TaskVisible": [
-                    "All"
-                  ],
-                  "dataType": "DV_TEXT",
-                  "itemName": "Nome",
-                  "itemPath": "items.0.5.items.2.items.0",
-                  "node": {
-                    "code": "at0001",
-                    "description": "The unstructured name or label for the organisation.",
-                    "text": "Nome"
-                  },
-                  "occurrences": {
-                    "lowerOccurrences": 0,
-                    "upperOccurrences": 1
-                  },
-                  "path": "[openEHR-EHR-COMPOSITION.report-result.v1]/[openEHR-EHR-ADMIN_ENTRY.demographics.v0]/[openEHR-EHR-CLUSTER.organisation.v1]/[at0001]",
-                  "ruleMandatory": [],
-                  "ruleVisibility": [],
-                  "value": null
-                },
-                {
-                  "Functions": [],
-                  "InternalFunctions": [],
-                  "Refset": [],
-                  "TaskEditable": [
-                    "All"
-                  ],
-                  "TaskInReport": [
-                    "All"
-                  ],
-                  "TaskVisible": [
-                    "All"
-                  ],
-                  "dataType": "DV_TEXT",
-                  "itemName": "Id da Instituição",
-                  "itemPath": "items.0.5.items.2.items.1",
-                  "node": {
-                    "code": "at0003",
-                    "description": "Identifier associated with the organisation.",
-                    "text": "Id da Instituição"
-                  },
-                  "occurrences": {
-                    "lowerOccurrences": 0,
-                    "upperOccurrences": 1
-                  },
-                  "path": "[openEHR-EHR-COMPOSITION.report-result.v1]/[openEHR-EHR-ADMIN_ENTRY.demographics.v0]/[openEHR-EHR-CLUSTER.organisation.v1]/[at0003]",
-                  "ruleMandatory": [],
-                  "ruleVisibility": [],
-                  "value": null
-                }
-              ],
-              "node": {
-                "code": "at0000",
-                "description": "An entity comprising one or more people and having a particular purpose.",
-                "text": "Instituição envolvida (receiver)"
-              },
-              "occurrences": {
-                "lowerOccurrences": 0,
-                "upperOccurrences": 1
-              },
+              
               "path": "[openEHR-EHR-COMPOSITION.report-result.v1]/[openEHR-EHR-ADMIN_ENTRY.demographics.v0]/[openEHR-EHR-CLUSTER.organisation.v1]",
               "ruleMandatory": [],
               "ruleVisibility": []
