@@ -9,8 +9,10 @@ let json = require('./jdt_imagem.json');
 
 const Forms = () => {
   const onSubmit = async (values) => {
+    values = JSON.parse(values)
     try {
-      const response = await axios.post('http://localhost:8080/newcomposition', values);
+      const response = await axios.post('http://localhost:8080/newcomposition', {values});
+      console.log(values);
       console.log('POST request successful:', response.data);
       alert('Composition submitted successfully!');
     } catch (error) {
