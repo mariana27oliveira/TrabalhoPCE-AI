@@ -10,3 +10,13 @@ module.exports.newComposition = async(composition) => {
         return {Success: false, response: err};
     }
 }
+module.exports.listCompositions = async () => {
+    try {
+        let lista = await CompositionSchema.find();
+        console.log(lista);
+        return { success: true, response: lista };
+    } catch (err) {
+        console.log(err);
+        return { success: false, response: err };
+    }
+}

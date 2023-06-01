@@ -49,7 +49,16 @@ router.post('/login', async (req, res) => {
       }else{
         res.status(200).json({ success: false, info: "Composition not added"});
     }
-  })
+  });
+
+ 
+  router.get("/listcompositions", async (req, res) => {
+  let listCompositionsResponse = await CompositionController.listCompositions();
+  if(!listCompositionsResponse.success) throw "Erro a listar composições";
+  else
+    res.status(200).json({ success: true, info: "List retrieved successfully", data: listCompositionsResponse});
+    
+  });
   
 
 app.use(router);
