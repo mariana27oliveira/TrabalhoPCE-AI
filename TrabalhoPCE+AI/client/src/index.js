@@ -9,8 +9,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import LoginForm from './Login/login';
 import Form from './formulario';
-import Options from './Login/afterlog';
 import Lista from './Login/listar';
+import AfterLog from './Login/afterlog';
 
 
 const router = createBrowserRouter([
@@ -23,8 +23,8 @@ const router = createBrowserRouter([
     element: <Form />,
   },
   {
-    path: "/options",
-    element: <Options />,
+    path: "/afterlog",
+    element: <AfterLog />,
   },
   {
     path: "/listar",

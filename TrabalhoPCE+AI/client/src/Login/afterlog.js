@@ -1,7 +1,7 @@
 import './login.css';
 
 
-function Options() {
+function AfterLog() {
 return (
     <div class="button-container">
 		<button class="button" onClick={() => { window.location.href = '/formulario'; }}>Nova composição</button>
@@ -10,4 +10,4 @@ return (
   );
 }
 
-export default Options;
+export default AfterLog;

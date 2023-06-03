@@ -26,7 +26,7 @@ function LoginForm() {
       });
       if (response.data.success) {
         setMessage('Login Successful');
-        navigate('/formulario');
+        navigate('/afterlog');
       } else {
         setMessage(response.data.info);
       }
