@@ -11,6 +11,10 @@ import LoginForm from './Login/login';
 import Form from './formulario';
 import Lista from './Login/listar';
 import AfterLog from './Login/afterlog';
+import Home from './Login/home';
+import SigninForm from './Login/signin';
+
+
 
 
 const router = createBrowserRouter([
@@ -29,6 +33,14 @@ const router = createBrowserRouter([
   {
     path: "/listar",
     element: <Lista />,
+  },
+  {
+    path: "/home",
+    element: <Home />,
+  },
+  {
+    path: "/signin",
+    element: <SigninForm />,
   },
 ]);
 
