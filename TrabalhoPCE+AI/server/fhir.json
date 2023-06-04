@@ -1,8 +1,8 @@
 {
     "resourceType": "Bundle",
-    "id": "c3b36c20-0fff-44a0-bf48-6ef1b81f45a0",
+    "id": "id_composition",
     "meta": {
-        "lastUpdated": "2017-11-15T12:16:00.358+00:00",
+        "lastUpdated": "data_atual",
         "profile": [
     "http://spms.min-saude.pt/pnb/profiles/mcdt_results_sync/v1.5.8"
         ]
@@ -10,9 +10,9 @@
     "type": "message",
     "entry": [
         {
-            "fullUrl": "http://spms.min-saude.pt/fhir/MessageHeader/ac185937-cc34-4e42-9459-ae5e1306c34d","resource": {
+            "fullUrl": "http://spms.min-saude.pt/fhir/MessageHeader/id_composition","resource": {
                 "resourceType": "MessageHeader",
-                "id": "ac185937-cc34-4e42-9459-ae5e1306c34d",
+                "id": "id_composition",
                 "event": {
                     "system": "http://spms.min-saude.pt/pnb/events",
                     "code": "10705",
@@ -29,29 +29,28 @@
                     }
                 ],
                 "sender": {
-                    "reference": "items.0.3.items.5.items.1.value.text",
-                    "display": "items.0.3.items.5.items.0.value.text"
+                    "reference": "items.0.3.items.4.items.1.value",
+                    "display": "items.0.3.items.4.items.0.value"
                 },
-                "timestamp": "2017-10-05T23:10:00.358+00:00",
+                "timestamp": "data_atual",
                 "source": {
-                    "name": "CARDIOLOGIC",
                     "endpoint": "101.20.15.12"
                 },
                 "focus": [
                     {
-                        "reference": "DiagnosticReport/101 - AQUI TEM DE SER O ID DO UTILIZADOR (987654321)"
+                        "reference": "id_composition"
                     }
                 ]
             }
         },
         {
-            "fullUrl": "http://spms.min-saude.pt/fhir/Patient/987654321","resource": {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Patient/id_paciente","resource": {
                 "resourceType": "Patient",
-                "id": "items.0.2.items.0.items.2.value.text",
+                "id": "items.0.2.items.0.items.2.value",
                 "extension": [
                     {
                         "url": "http://spms.min-saude.pt/pnb/extensions/patient-coverage","valueReference": {
-                            "reference": "items.0.5.items.3.items.0.value.text"
+                            "reference": "items.0.5.items.2.items.0.value"
                         }
                     }
                 ],
@@ -66,27 +65,26 @@
                             ],
                             "text": "SNS"
                         },
-                        "system": "http://spms.min-saude.pt/rnu/identifiers/patient-id","value": "items.0.2.items.0.items.2.value.text"
+                        "system": "http://spms.min-saude.pt/rnu/identifiers/patient-id","value":"items.0.2.items.0.items.2.value"
                     }
                 ],
                 "name": [
                     {
-                        "text": "items.0.2.items.0.items.0.value.text"
+                        "text": "items.0.2.items.0.items.0.value"
                     }
                 ],
                 "gender": "items.0.2.items.0.items.1.value.text",
-                "birthDate": "1970-01-01",
                 "address": [
                     {
-                        "text": "items.0.2.items.0.items.3.items.0.value.text"
+                        "text": "items.0.2.items.0.items.3.items.0.value.0.value"
                     }
                 ]
             }
         },
         {
-            "fullUrl": "http://spms.min-saude.pt/fhir/DiagnosticReport/101","resource": {
+            "fullUrl": "http://spms.min-saude.pt/fhir/DiagnosticReport/id_composition","resource": {
                 "resourceType": "DiagnosticReport",
-                "id": "101",
+                "id": "id_composition",
                 "meta": {
                     "security": [
                         {
@@ -106,7 +104,7 @@
                 "category": {
                     "coding": [
                         {
-                            "system": "http://www.acss.min-saude.pt/mcdt/valueset/clinical-areas","code": "items.0.3.items.0.value.code",
+                            "system": "http://www.acss.min-saude.pt/mcdt/valueset/clinical-areas","code":"items.0.3.items.0.value.code",
                             "display": "items.0.3.items.0.value.text"
                         }
                         
@@ -116,20 +114,20 @@
                     "coding": [
                         
                         {
-                            "system": "https://www.acss.min-saude.pt/category/prestadores/convencionados/#tab_tabelas-meios-complementaresde-diagnostico-e-terapeutica","code": "items.0.3.items.2.value.code",
-                            "display": "items.0.3.items.2.value.text"
+                            "system": "https://www.acss.min-saude.pt/category/prestadores/convencionados/#tab_tabelas-meios-complementaresde-diagnostico-e-terapeutica","code": "items.0.3.items.2.value.0.code",
+                            "display": "items.0.3.items.2.value.0.text"
                         }
                     ]
                 },
                 "subject": {
-                    "reference": "items.0.2.items.0.items.2.value.text"
+                    "reference": "items.0.2.items.0.items.2.value"
                 },
-                "issued": "2017-11-14T11:45:33+11:00",
+                "issued": "data_atual",
                 "performer": [
                     {
                         "actor": {
-                            "reference": "items.0.3.items.5.items.1.value.text",
-                            "display": "items.0.3.items.5.items.0.value.text"
+                            "reference": "items.0.3.items.4.items.1.value",
+                            "display": "items.0.3.items.4.items.0.value"
                         }
                     },
                     {
@@ -137,22 +135,22 @@
                             "coding": [
                                 {
                                     "system": "http://snomed.info/sct",
-                                    "display": "items.0.3.items.3.items.1.value.text"
+                                    "display": "items.0.3.items.3.items.0.value.0.value"
                                 }
                             ]
                         },
                         "actor": {
-                            "reference": "items.0.3.items.4.items.1.value.text"
+                            "reference": "items.0.3.items.3.items.1.value"
                             
                         }
                     }
                 ],
                 "result": [
                     {
-                        "reference": "Observation/item2001000000005034600003"
+                        "reference": "Observation"
                     }
                 ],
-                "conclusion": "items.0.3.items.6.value.text","presentedForm": [
+                "conclusion": "items.0.3.items.5.value.0.value","presentedForm": [
                     {
                         "contentType": "application/pdf",
                         "language": "pt",
@@ -162,55 +160,51 @@
             }
         },
         {
-            "fullUrl": "http://spms.min-saude.pt/fhir/Observation/item2001000000005034600003",
+            "fullUrl": "http://spms.min-saude.pt/fhir/Observation",
             "resource": {
                 "resourceType": "Observation",
-                "id": "item-2001000000005034600003",
                 "status": "items.0.3.items.1.value.text",
                 "code": {
                     "coding": [
                         {
                             "system": "http://www.acss.minsaude.pt/2016/10/03/tabelas-meios-complementares-de-diagnostico-eterapeutica/codigo-sns",
-                            "code": "items.0.3.items.2.value.code",
-                            "display": "items.0.3.items.0.value.text "
+                            "code": "items.0.3.items.2.value.0.code",
+                            "display": "items.0.3.items.2.value.0.text"
                         }
                         
                     ]
                 },
                 "subject": {
-                    "reference": "items.0.2.items.0.items.2.value.text"
+                    "reference": "items.0.2.items.0.items.2.value"
                 },
-                "effectiveDateTime": "2017-11-15T09:30:35+01:00",
+                "effectiveDateTime": "data_atual",
                 "performer": [
                     {
-                        "reference": "items.0.3.items.4.items.1.value.text",
-                        "display": "Dra. Remedios"
+                        "reference": "items.0.3.items.3.items.1.value"
                     }
                 ],
                 "valueQuantity": {
-                    "value": "items.0.4.items.3.items.2.value.text",
-                    "unit": "items.0.4.items.3.items.3.value.text",
-                    "system": "http://unitsofmeasure.org",
-                    "code": "258983007 NAO HÁ"
+                    "value":"items.0.4.items.1.items.2.value",
+                    "unit": "items.0.4.items.1.items.3.value",
+                    "system": "http://unitsofmeasure.org"
                 },
                 "interpretation": {
                     "coding": [
                         {
                             "system": "http://hl7.org/fhir/v2/0078",
-                            "code": "A NAO TEMOS, NAO E DE OPÇÕES",
-                            "display": "items.0.4.items.3.items.1.value.text"
+                            "display":"items.0.4.items.1.items.1.value.text"
                         }
                     ]
                 },
                 "device": {
-                    "display": "items.0.4.items.3.items.4.value.text"
+                    "display":"items.0.4.items.1.items.4.value"
                 }
             }
         },
         {
-            "fullUrl": "http://spms.min-saude.pt/fhir/Practitioner/99999","resource": {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Practitioner/cedula_profissional","resource": {
                 "resourceType": "Practitioner",
-                "id": "items.0.3.items.4.items.1.value.text",
+                "id":"items.0.3.items.3.items.1.value",
                 "identifier": [
                     {
                         "type": {
@@ -222,44 +216,39 @@
                             ]
                         },
                         "system": "https://www.ordemdosmedicos.pt",
-                        "value": "items.0.3.items.4.items.1.value.text"
-                    }
-                ],
-                "name": [
-                    {
-                        "text": "Dra. Remedios"
+                        "value": "items.0.3.items.3.items.1.value"
                     }
                 ]
             }
         },
         {
-            "fullUrl": "http://spms.min-saude.pt/fhir/Coverage/ADSE",
+            "fullUrl": "http://spms.min-saude.pt/fhir/Coverage",
             "resource": {
                 "resourceType": "Coverage",
-                "id": "items.0.5.items.3.items.0.value.text",
+                "id": "items.0.5.items.2.items.0.value",
                 "identifier": [
                     {
-                        "system": "https://www.adse.pt/identifiers/adsenumber",
-                        "value": "items.0.5.items.3.items.1.value.text"
+                        "system": "https://www.adse.pt/identifiers",
+                        "value": "items.0.5.items.2.items.1.value"
                     }
                 ],
                 "payor": [
                     {
-                        "reference": "items.0.5.items.3.items.0.value.text"
+                        "reference": "items.0.5.items.2.items.0.value"
                     }
                 ]
             }
         },
         {
-            "fullUrl": "http://spms.min-saude.pt/fhir/Organization/78e24234","resource": {
+            "fullUrl": "http://spms.min-saude.pt/fhir/Organization","resource": {
                 "resourceType": "Organization",
-                "id": "items.0.3.items.5.items.1.value.text",
+                "id": "items.0.3.items.4.items.1.value",
                 "identifier": [
                     {
-                        "system": "http://spms.min-saude.pt/sges/identifiers/providing-entity-id","value": "items.0.3.items.5.items.1.value.text"
+                        "system": "http://spms.min-saude.pt/sges/identifiers/providing-entity-id","value": "items.0.3.items.4.items.1.value"
                     }
                 ],
-                "name": "items.0.3.items.5.items.0.value.text"
+                "name": "items.0.3.items.4.items.0.value"
             }
         }
     ]
