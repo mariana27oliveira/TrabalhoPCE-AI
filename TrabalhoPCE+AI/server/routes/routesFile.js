@@ -141,7 +141,7 @@ router.get("/mensagem/:id", async (req, res) => {
     identificador= req.params.id;
     let deletemsg = await messageFHIRController.deleteMensagem(identificador);
     let deletecomposition = await CompositionController.deleteComposition(identificador);
-    if(!deletecomposition.success) throw "Erro a eliminar a mensagem FHIR";
+    if(!deletecomposition.success | !deletemsg.success) throw "Erro a eliminar a mensagem FHIR";
     else
       res.status(200).json({ success: true, info: "Mensagem apagada com sucesso"});
     });
