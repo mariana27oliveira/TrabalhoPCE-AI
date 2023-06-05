@@ -1,8 +1,8 @@
 const MessageFHIRSchema = require("../model/messageFHIR");
 
-module.exports.newMessageFHIR = async (fhirData) => {
+module.exports.newMessageFHIR = async (erh_id, fhirData) => {
   try {
-    let fhir = new MessageFHIRSchema({ fhir: fhirData }); 
+    let fhir = new MessageFHIRSchema({ erh_id, fhir: fhirData }); 
     let response = await fhir.save();
     console.log(response);
     return { Success: true, response };

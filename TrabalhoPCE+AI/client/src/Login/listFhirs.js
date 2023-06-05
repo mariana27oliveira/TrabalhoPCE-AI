@@ -120,7 +120,7 @@ function ListaFhirs() {
                   ({fhir.fhir.entry[1].resource.id}) {fhir.fhir.entry[1].resource.name[0].text}
                 </td>
                 <td>
-                  <Link to={'/listaFhirs/' + fhir.fhir.id} className='link'>
+                  <Link to={'/mensagem/' + fhir.fhir.id} className='link'>
                     Acesso
                   </Link>
                 </td>
