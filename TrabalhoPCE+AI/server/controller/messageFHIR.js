@@ -22,3 +22,32 @@ module.exports.listFhirs = async () => {
       return { success: false, response: err };
   }
 }
+
+module.exports.getJsonById = async (id) => {
+  try {
+    let json = await MessageFHIRSchema.findOne({ erh_id: id }, { fhir: 1 });
+    if (!json) {
+      return { success: false, response: 'No JSON found for the given ehr_id' };
+    }
+    console.log(json);
+    return { success: true, response: json.fhir };
+  } catch (err) {
+    console.log(err);
+    return { success: false, response: err };
+  }
+};
+
+module.exports.deleteMensagem = async (id) => {
+  try {
+    let json = await MessageFHIRSchema.deleteOne({ erh_id: id });
+    if (!json.deletedCount) {
+      return { success: false, response: 'No JSON found for the given ehr_id' };
+    }
+    console.log(json);
+    return { success: true };
+  } catch (err) {
+    console.log(err);
+    return { success: false, response: err };
+  }
+};
+

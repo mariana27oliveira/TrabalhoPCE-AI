@@ -31,3 +31,28 @@ module.exports.newComposition = async (composition) => {
   }
 };
 
+module.exports.listCompositions = async () => {
+    try {
+        let lista = await CompositionSchema.find();
+        console.log(lista);
+        return { success: true, response: lista };
+    } catch (err) {
+        console.log(err);
+        return { success: false, response: err };
+    }
+}
+
+
+module.exports.deleteComposition = async (id) => {
+  try {
+    let json = await CompositionSchema.deleteOne({ composition_id: id });
+    if (!json.deletedCount) {
+      return { success: false, response: 'No JSON found for the given ehr_id' };
+    }
+    console.log(json);
+    return { success: true };
+  } catch (err) {
+    console.log(err);
+    return { success: false, response: err };
+  }
+};

@@ -14,6 +14,7 @@ import Home from './Login/home';
 import SigninForm from './Login/signin';
 import ListaFhirs from './Login/listFhirs';
 
+import Mensagem from './Login/mensagem';
 
 
 
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: "/signin",
     element: <SigninForm />,
+  },
+  {
+    path: "/mensagem/:id",
+    element: <Mensagem />,
   },
 ]);
 
