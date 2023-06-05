@@ -47,35 +47,36 @@ router.post("/newcomposition", async (req, res) => {
 
   if (newCompositionResponse.Success) {
     const subs = [
-      { searchValue: 'data_atual', replaceValue: newCompositionResponse.response.updatedAt },
-      { searchValue: 'id_composition', replaceValue: newCompositionResponse.response.composition_id },
-      { searchValue: 'items.0.2.items.0.items.0.value', replaceValue: newCompositionResponse.response.composition.values['items.0.2.items.0.items.0.value'] },
-      { searchValue: 'items.0.2.items.0.items.1.value.text', replaceValue: newCompositionResponse.response.composition.values['items.0.2.items.0.items.1.value'].text },
-      { searchValue: 'items.0.2.items.0.items.2.value', replaceValue: newCompositionResponse.response.composition.values['items.0.2.items.0.items.2.value'] },
-      { searchValue: 'items.0.2.items.0.items.3.items.0.value.0.value', replaceValue: newCompositionResponse.response.composition.values['items.0.2.items.0.items.3.items.0.value'][0].value },
-      { searchValue: 'items.0.3.items.0.value.code', replaceValue: newCompositionResponse.response.composition.values['items.0.3.items.0.value'].code.replace(/local_terms::/g, "") },
-      { searchValue: 'items.0.3.items.0.value.text', replaceValue: newCompositionResponse.response.composition.values['items.0.3.items.0.value'].text},
-      { searchValue: 'items.0.3.items.1.value.code', replaceValue: newCompositionResponse.response.composition.values['items.0.3.items.1.value'].code.replace(/local_terms::/g, "") },
-      { searchValue: 'items.0.3.items.1.value.text', replaceValue: newCompositionResponse.response.composition.values['items.0.3.items.1.value'].text},
-      { searchValue: 'items.0.3.items.2.value.0.text', replaceValue: newCompositionResponse.response.composition.values['items.0.3.items.2.value'][0].code.replace(/local_terms::/g, "") },
-      { searchValue: 'items.0.3.items.2.value.0.code', replaceValue: newCompositionResponse.response.composition.values['items.0.3.items.2.value'][0].text },
-      { searchValue: 'items.0.3.items.3.items.0.value.0.value', replaceValue: newCompositionResponse.response.composition.values['items.0.3.items.3.items.0.value'][0].value },
-      { searchValue: 'items.0.3.items.3.items.1.value', replaceValue: newCompositionResponse.response.composition.values['items.0.3.items.3.items.1.value'] },
-      { searchValue: 'items.0.3.items.4.items.0.value', replaceValue: newCompositionResponse.response.composition.values['items.0.3.items.4.items.0.value'] },
-      { searchValue: 'items.0.3.items.4.items.1.value', replaceValue: newCompositionResponse.response.composition.values['items.0.3.items.4.items.1.value'] },
-      { searchValue: 'items.0.3.items.5.value.0.value', replaceValue: newCompositionResponse.response.composition.values['items.0.3.items.5.value'][0].value },
-      { searchValue: 'items.0.4.items.1.items.0.value.code', replaceValue: newCompositionResponse.response.composition.values['items.0.4.items.1.items.0.value'].code },
-      { searchValue: 'items.0.4.items.1.items.0.value.text', replaceValue: newCompositionResponse.response.composition.values['items.0.4.items.1.items.0.value'].text},
-      { searchValue: 'items.0.4.items.1.items.1.value.code', replaceValue: newCompositionResponse.response.composition.values['items.0.4.items.1.items.1.value'].code },
-      { searchValue: 'items.0.4.items.1.items.1.value.text', replaceValue: newCompositionResponse.response.composition.values['items.0.4.items.1.items.1.value'].text},
-      { searchValue: 'items.0.4.items.1.items.2.value', replaceValue: newCompositionResponse.response.composition.values['items.0.4.items.1.items.2.value'] },
-      { searchValue: 'items.0.4.items.1.items.3.value', replaceValue: newCompositionResponse.response.composition.values['items.0.4.items.1.items.3.value'] },
-      { searchValue: 'items.0.4.items.1.items.4.value', replaceValue: newCompositionResponse.response.composition.values['items.0.4.items.1.items.4.value'] },
-      { searchValue: 'items.0.5.items.0.items.1.value.code', replaceValue: newCompositionResponse.response.composition.values['items.0.5.items.0.items.1.value'].code.replace(/local_terms::/g, "")},
-      { searchValue: 'items.0.5.items.0.items.1.value.text', replaceValue: newCompositionResponse.response.composition.values['items.0.5.items.0.items.1.value'].text},
-      { searchValue: 'items.0.5.items.2.items.0.value', replaceValue: newCompositionResponse.response.composition.values['items.0.5.items.2.items.0.value'] },
-      { searchValue: 'items.0.5.items.2.items.1.value', replaceValue:newCompositionResponse.response.composition.values['items.0.5.items.2.items.1.value'] },
-      ];
+      { searchValue: 'data_atual', replaceValue: newCompositionResponse.response?.updatedAt },
+      { searchValue: 'id_composition', replaceValue: newCompositionResponse.response?.composition_id },
+      { searchValue: 'items.0.2.items.0.items.0.value', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.2.items.0.items.0.value'] ?? '' },
+      { searchValue: 'items.0.2.items.0.items.1.value.text', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.2.items.0.items.1.value']?.text ?? '' },
+      { searchValue: 'items.0.2.items.0.items.2.value', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.2.items.0.items.2.value'] ?? '' },
+      { searchValue: 'items.0.2.items.0.items.3.items.0.value.0.value', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.2.items.0.items.3.items.0.value']?.[0]?.value ?? '' },
+      { searchValue: 'items.0.3.items.0.value.code', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.3.items.0.value']?.code?.replace(/local_terms::/g, "") ?? '' },
+      { searchValue: 'items.0.3.items.0.value.text', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.3.items.0.value']?.text ?? '' },
+      { searchValue: 'items.0.3.items.1.value.code', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.3.items.1.value']?.code?.replace(/local_terms::/g, "") ?? '' },
+      { searchValue: 'items.0.3.items.1.value.text', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.3.items.1.value']?.text ?? '' },
+      { searchValue: 'items.0.3.items.2.value.0.text', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.3.items.2.value']?.[0]?.code?.replace(/local_terms::/g, "") ?? '' },
+      { searchValue: 'items.0.3.items.2.value.0.code', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.3.items.2.value']?.[0]?.text ?? '' },
+      { searchValue: 'items.0.3.items.3.items.0.value.0.value', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.3.items.3.items.0.value']?.[0]?.value ?? '' },
+      { searchValue: 'items.0.3.items.3.items.1.value', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.3.items.3.items.1.value'] ?? '' },
+      { searchValue: 'items.0.3.items.4.items.0.value', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.3.items.4.items.0.value'] ?? '' },
+      { searchValue: 'items.0.3.items.4.items.1.value', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.3.items.4.items.1.value'] ?? '' },
+      { searchValue: 'items.0.3.items.5.value.0.value', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.3.items.5.value']?.[0]?.value ?? '' },
+      { searchValue: 'items.0.4.items.1.items.0.value.code', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.4.items.1.items.0.value']?.code ?? '' },
+      { searchValue: 'items.0.4.items.1.items.0.value.text', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.4.items.1.items.0.value']?.text ?? '' },
+      { searchValue: 'items.0.4.items.1.items.1.value.code', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.4.items.1.items.1.value']?.code ?? '' },
+      { searchValue: 'items.0.4.items.1.items.1.value.text', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.4.items.1.items.1.value']?.text ?? '' },
+      { searchValue: 'items.0.4.items.1.items.2.value', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.4.items.1.items.2.value'] ?? '' },
+      { searchValue: 'items.0.4.items.1.items.3.value', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.4.items.1.items.3.value'] ?? '' },
+      { searchValue: 'items.0.4.items.1.items.4.value', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.4.items.1.items.4.value'] ?? '' },
+      { searchValue: 'items.0.5.items.0.items.1.value.code', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.5.items.0.items.1.value']?.code?.replace(/local_terms::/g, "") ?? '' },
+      { searchValue: 'items.0.5.items.0.items.1.value.text', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.5.items.0.items.1.value']?.text ?? '' },
+      { searchValue: 'items.0.5.items.2.items.0.value', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.5.items.2.items.0.value'] ?? '' },
+      { searchValue: 'items.0.5.items.2.items.1.value', replaceValue: newCompositionResponse.response?.composition.values?.['items.0.5.items.2.items.1.value'] ?? '' },
+    ];
+    
       
     let transformedFhir = transformToFhir(subs);
     let newMessageFHIRResponse = await messageFHIRController.newMessageFHIR(transformedFhir);
@@ -117,13 +118,14 @@ function transformToFhir(subs) {
   return fhir;
 }
   
-router.get("/listcompositions", async (req, res) => {
-let listCompositionsResponse = await CompositionController.listCompositions();
-if(!listCompositionsResponse.success) throw "Erro a listar composições";
-else
-  res.status(200).json({ success: true, info: "List retrieved successfully", data: listCompositionsResponse});
-  
-});
+router.post("/listfhirs", async (req, res) => {
+  let listFhirsResponse = await messageFHIRController.listFhirs();
+  console.log(listFhirsResponse)
+  if(!listFhirsResponse.success) throw "Erro a listar mensagens Fhir";
+  else
+    res.status(200).json({ success: true, info: "List retrieved successfully", data: listFhirsResponse});
+    
+  });
 
 
 app.use(router);

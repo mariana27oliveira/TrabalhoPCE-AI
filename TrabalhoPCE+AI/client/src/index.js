@@ -9,10 +9,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import LoginForm from './Login/login';
 import Form from './formulario';
-import Lista from './Login/listar';
 import AfterLog from './Login/afterlog';
 import Home from './Login/home';
 import SigninForm from './Login/signin';
+import ListaFhirs from './Login/listFhirs';
 
 
 
@@ -31,8 +31,8 @@ const router = createBrowserRouter([
     element: <AfterLog />,
   },
   {
-    path: "/listar",
-    element: <Lista />,
+    path: "/listaFhirs",
+    element: <ListaFhirs/>,
   },
   {
     path: "/home",

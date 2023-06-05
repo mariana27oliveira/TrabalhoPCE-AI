@@ -11,3 +11,14 @@ module.exports.newMessageFHIR = async (fhirData) => {
     return { Success: false, response: err };
   }
 };
+
+module.exports.listFhirs = async () => {
+  try {
+      let lista = await MessageFHIRSchema.find();
+      console.log(lista);
+      return { success: true, response: lista };
+  } catch (err) {
+      console.log(err);
+      return { success: false, response: err };
+  }
+}
