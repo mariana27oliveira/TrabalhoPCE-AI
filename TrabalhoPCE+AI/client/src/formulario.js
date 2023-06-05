@@ -5,8 +5,16 @@ import {Form} from "protected-aidaforms";
 let json = require('./jdt_imagem.json');
 let style= require('./style_imagem.json');
 
+import './style_imagem.json';
+import { useNavigate } from 'react-router-dom';
+
+
+let json = require('./jdt_imagem.json');
 
 const Forms = () => {
+
+  //const navigate = useNavigate();
+
   const onSubmit = async (values) => {
     values = JSON.parse(values)
     try {
@@ -14,6 +22,7 @@ const Forms = () => {
       console.log(values);
       console.log('POST request successful:', response.data);
       alert('Composition submitted successfully!');
+      //navigate('/afterlog');
     } catch (error) {
       console.error('Error submitting composition:', error);
       alert('Error submitting composition. Please try again.');

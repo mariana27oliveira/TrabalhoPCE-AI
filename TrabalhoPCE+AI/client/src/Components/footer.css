@@ -1,0 +1,25 @@
+.footer {
+    color: white;
+    width: 100%;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background: #214559;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  .footer-text {
+    color: #fff;
+    font-size: 2rem;
+  }
+  
+  

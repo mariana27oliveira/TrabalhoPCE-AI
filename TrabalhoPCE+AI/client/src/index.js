@@ -5,7 +5,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import LoginForm from './Login/login';
 import Form from './formulario';
@@ -21,7 +20,7 @@ import Mensagem from './Login/mensagem';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LoginForm />,
+    element: <Home />,
   },
   {
     path: "/formulario",
@@ -36,8 +35,8 @@ const router = createBrowserRouter([
     element: <ListaFhirs/>,
   },
   {
-    path: "/home",
-    element: <Home />,
+    path: "/login",
+    element: <LoginForm />,
   },
   {
     path: "/signin",

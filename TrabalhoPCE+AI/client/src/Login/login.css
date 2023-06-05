@@ -34,7 +34,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
   /*background-color: var(--tertiary-color);*/
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
 }
@@ -121,3 +121,4 @@ body {
   color: #214559;
   transform: scale(1.1);
 }
+

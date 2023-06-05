@@ -2,6 +2,8 @@ import './login.css';
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 
 function LoginForm() {
   const [email, setEmail] = useState('');
@@ -37,6 +39,8 @@ function LoginForm() {
   };
 
   return (
+    <div>
+      <Navbar/>
     <div className="login-wrapper">
       <div className="login-header">
         <h1>Login</h1>
@@ -50,6 +54,8 @@ function LoginForm() {
         <hr></hr>
         {message && <div>{message}</div>}
       </form>
+    </div>
+    <Footer/>
     </div>
   );
 }

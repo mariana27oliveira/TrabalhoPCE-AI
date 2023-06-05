@@ -1,7 +1,9 @@
-import './login.css';
+import './sigin.css';
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 
 function SigninForm() {
   const [name, setName] = useState('');
@@ -40,7 +42,7 @@ function SigninForm() {
       });
       if (response.data.success) {
         setMessage('Account created successfully');
-        navigate('/');
+        navigate('/login');
       } else {
         setMessage(response.data.info);
       }
@@ -51,23 +53,29 @@ function SigninForm() {
   };
 
   return (
+    <div>
+      <Navbar/>
     <div className="signup-wrapper">
       <div className="signup-header">
-        <h1>Create an Account</h1>
+        <h1>Criar Conta</h1>
       </div>
       <form className="signup-form" onSubmit={handleSubmit}>
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Nome</label>
         <input type="text" id="name" name="name" placeholder="Enter your name" required value={name} onChange={handleNameChange} />
         <label htmlFor="email">Email</label>
         <input type="email" id="email" name="email" placeholder="Enter your email" required value={email} onChange={handleEmailChange} />
         <label htmlFor="password">Password</label>
         <input type="password" id="password" name="password" placeholder="Enter your password" required value={password} onChange={handlePasswordChange} />
-        <label htmlFor="confirmPassword">Confirm Password</label>
+        <label htmlFor="confirmPassword">Confirmar Password</label>
         <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required value={confirmPassword} onChange={handleConfirmPasswordChange} />
-        <button type="submit">Create Account</button>
-        <hr></hr>
+        <button type="submit">Criar Conta</button>
         {message && <div>{message}</div>}
       </form>
+    </div>
+    <br></br>
+    <br></br>
+    <br></br>
+    <Footer/>
     </div>
   );
 }
