@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './listFhirs.css';
+import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 
 function ListaFhirs() {
   const [fhirList, setFhirList] = useState([]);
@@ -48,6 +50,8 @@ function ListaFhirs() {
   };
   
   return (
+    <div>
+      <Navbar/>
     <div className='lista-fhirs-container'>
       <h1 className='title'>Lista das Mensagens FHIR:</h1>
       <div className='filter-container'>
@@ -141,6 +145,8 @@ function ListaFhirs() {
       </table>
   
       {success && <p>Erro: {success}</p>}
+    </div>
+    <Footer/>
     </div>
   );
 }
