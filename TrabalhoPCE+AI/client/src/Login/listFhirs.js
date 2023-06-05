@@ -23,12 +23,17 @@ function ListaFhirs() {
   }, []);
 
   const deleteTerm = (id) => {
-    axios.delete('http://localhost:8080/delete/' + id
-    ).then((res) => {
-      alert(res.data.info);
-    });
+    axios
+      .delete('http://localhost:8080/delete/' + id)
+      .then((res) => {
+        alert(res.data.info);
+        window.location.reload(); // Refresh the page
+      })
+      .catch((error) => {
+        setSuccess('Erro ao apagar a mensagem.');
+      });
   };
-
+ 
   const handleCategoryChange = (e) => {
     const selectedCategory = e.target.value;
     setSelectedCategory(selectedCategory);
