@@ -79,7 +79,8 @@ router.post("/newcomposition", async (req, res) => {
     
       
     let transformedFhir = transformToFhir(subs);
-    let newMessageFHIRResponse = await messageFHIRController.newMessageFHIR(transformedFhir);
+    let id = newCompositionResponse.response.composition_id
+    let newMessageFHIRResponse = await messageFHIRController.newMessageFHIR(id, transformedFhir);
 
     if (newMessageFHIRResponse.Success) {
       res.status(200).json({ success: true, info: "Composition and FHIR added successfully" });
