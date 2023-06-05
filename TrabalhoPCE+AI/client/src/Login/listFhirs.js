@@ -23,7 +23,7 @@ function ListaFhirs() {
   }, []);
 
   const deleteTerm = (id) => {
-    axios.post('http://localhost:8080/delete/' + id
+    axios.delete('http://localhost:8080/delete/' + id
     ).then((res) => {
       alert(res.data.info);
     });
