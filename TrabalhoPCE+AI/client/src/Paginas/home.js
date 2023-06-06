@@ -1,6 +1,5 @@
-
 import React from 'react';
-import './login.css';
+import './home.css'
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 
@@ -10,7 +9,7 @@ function Home() {
     <div>
       <Navbar/>
       <div class="button-container">
-        <p>Interoperabilidade</p>
+        <h1>EXAMES MÉDICOS</h1>
 	    </div>
       <Footer/>
     </div>
@@ -18,3 +17,4 @@ function Home() {
 }
 
 export default Home;
+

@@ -41,6 +41,8 @@ function LoginForm() {
   return (
     <div>
       <Navbar/>
+      <br></br>
+      <br></br>
     <div className="login-wrapper">
       <div className="login-header">
         <h1>Login</h1>

@@ -21,6 +21,7 @@ body {
   font-family: 'Roboto', sans-serif;
   background-position: left;
   background-size: cover;
+
   
 }
 
@@ -40,7 +41,8 @@ body {
 .login-header h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 3rem;
-  color: var(--primary-color);
+  color: var(--tertiary-color);
+  font-weight: bold;
 }
 
 .login-form {
