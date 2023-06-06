@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import './listFhirs.css';
 import Navbar from '../Components/Navbar';
@@ -141,6 +143,11 @@ function ListaFhirs() {
               </tr>
             ))
           )}
+          <br></br>
+          <br></br>
+        <Link to='/afterlog' className='back-link' >
+          <FontAwesomeIcon icon={faArrowLeft} />
+        </Link>
         </tbody>
       </table>
   

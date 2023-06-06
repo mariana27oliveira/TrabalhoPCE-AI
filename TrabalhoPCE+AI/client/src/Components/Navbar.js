@@ -3,6 +3,8 @@ import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './navbar.css';
 import Dropdown from './Dropdown';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHospital } from '@fortawesome/free-solid-svg-icons';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -27,13 +29,13 @@ function Navbar() {
     }
   };
 
+
   return (
     <>
       <nav className='navbar'>
-        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-          Interoperabilidade
-          <i class='fab fa-firstdraft' />
-        </Link>
+      <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+        <FontAwesomeIcon icon={faHospital} />
+      </Link>
         <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>
@@ -59,7 +61,7 @@ function Navbar() {
           <li>
             <Link
               to='/'
-              className='nav-links-mobile'
+              className='nav-links-mobile nav-links-mobile-sair'
               onClick={closeMobileMenu}
             >
               Sair

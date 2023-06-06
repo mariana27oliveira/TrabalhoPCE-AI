@@ -2,47 +2,57 @@
 	background: #214559;
 	height: 80px;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between; /* Alinhar elementos à esquerda e à direita */
 	align-items: center;
 	font-size: 1.2rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adicionado box-shadow */
+
   }
   
   .navbar-logo {
 	color: #fff;
-	justify-self: start;
-	margin-left: 20px;
+	margin-left: 30px;
 	cursor: pointer;
 	text-decoration: none;
 	font-size: 2rem;
   }
   
-  .fa-firstdraft {
-	margin-left: 0.5rem;
-	font-size: 1.6rem;
-  }
-  
   .nav-menu {
-	display: grid;
-	grid-template-columns: repeat(5, auto);
-	grid-gap: 10px;
-	list-style: none;
-	text-align: center;
+	display: flex;
+	justify-content: flex-end; /* Alterado para flex-end */
+	align-items: center;
 	width: 70vw;
-	justify-content: end;
-	margin-right: 2rem;
+	margin-right: 30px;
   }
   
   .nav-item {
 	display: flex;
 	align-items: center;
 	height: 80px;
+	margin-left: 10px; /* Adicionado margin-left para separar os itens */
   }
   
   .nav-links {
 	color: white;
 	text-decoration: none;
 	padding: 0.5rem 1rem;
+	margin-left: 10px;
+	margin-right: 10px; /* Alterado para margin-right: 10px */
   }
+  
+
+  .nav-links-mobile-sair {
+	margin-left: 10px; /* Defina a margem esquerda desejada */
+  }
+  
+  
+  
+
   
   .nav-links:hover {
 	background-color: #0a5f20;
@@ -50,12 +60,15 @@
 	transition: all 0.2s ease-out;
   }
   
-  .fa-bars {
-	color: #fff;
+  .navbar-logo,
+  .nav-links {
+	display: flex;
+	align-items: center;
   }
   
   .nav-links-mobile {
 	display: none;
+	margin-right:10px !important;
   }
   
   .menu-icon {
@@ -88,10 +101,10 @@
 	}
   
 	.nav-links {
-	  text-align: center;
-	  padding: 2rem;
-	  width: 100%;
-	  display: table;
+	  color: white;
+	  text-decoration: none;
+	  padding: 0.5rem 1rem;
+	  margin-left: 10px;
 	}
   
 	.nav-links:hover {
@@ -144,3 +157,4 @@
 	  display: none;
 	}
   }
+  

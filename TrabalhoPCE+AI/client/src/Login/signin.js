@@ -55,6 +55,9 @@ function SigninForm() {
   return (
     <div>
       <Navbar/>
+      <br></br>
+      <br></br>
+      <br></br>
     <div className="signup-wrapper">
       <div className="signup-header">
         <h1>Criar Conta</h1>

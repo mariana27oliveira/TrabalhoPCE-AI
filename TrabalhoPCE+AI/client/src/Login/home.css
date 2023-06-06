@@ -1,0 +1,32 @@
+/* home.css */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+:root {
+  --primary-color: #1976d2;
+  --secondary-color: #e5f5f5;
+  --tertiary-color: #fff;
+}
+
+body {
+  background-size: cover;
+  background-position: center;
+  background-image: url('h1.jpg');
+
+}
+
+.button-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.button-container h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+}

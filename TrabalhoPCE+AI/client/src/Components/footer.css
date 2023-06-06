@@ -9,17 +9,19 @@
     background: #214559;
     color: #fff;
     font-family: Arial, sans-serif;
-    font-size: 1.2rem;
-    height: 80px;
+    font-size: 0.8rem;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adicionado box-shadow */
+
   }
 
   
   .footer-text {
     color: #fff;
-    font-size: 2rem;
+    font-size: 1rem;
   }
   
   
