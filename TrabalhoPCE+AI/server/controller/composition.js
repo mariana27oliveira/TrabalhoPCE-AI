@@ -42,6 +42,19 @@ module.exports.listCompositions = async () => {
     }
 }
 
+module.exports.getJsonById = async (id) => {
+  try {
+    let json = await CompositionSchema.findOne({ composition_id: id }, { composition: 1 });
+    if (!json) {
+      return { success: false, response: 'No JSON found for the given composition_id' };
+    }
+    console.log(json);
+    return { success: true, response: json.composition };
+  } catch (err) {
+    console.log(err);
+    return { success: false, response: err };
+  }
+};
 
 module.exports.deleteComposition = async (id) => {
   try {

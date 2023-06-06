@@ -4,8 +4,8 @@ import {Form} from "protected-aidaforms";
 import { useNavigate } from 'react-router-dom';
 
 
-let json = require('./jdt_imagem.json');
-let style= require('./style_imagem.json');
+let json = require('../jdt_imagem.json');
+let style= require('../style_imagem.json');
 
 
 

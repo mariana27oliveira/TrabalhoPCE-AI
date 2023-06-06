@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+:root {
+  --primary-color: #1976d2; 
+  --secondary-color: #e5f5f5; 
+  --tertiary-color: #fff; 
+}
+
+body {
+  background-color: var(--secondary-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+.signup-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.signup-header {
+  margin-bottom: 2rem;
+}
+
+.signup-header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--tertiary-color);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    margin: 0 auto; 
+  }
+
+.signup-form label {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+}
+
+.signup-form button[type="submit"] {
+  width: 100%;
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.signup-form button[type="submit"]:hover {
+  background-color: #0a5f20;
+}
+
+.signup-form hr {
+  width: 100%;
+  margin: 1rem 0;
+  border: none;
+  border-top: 1px solid var(--primary-color);
+}
+
+.signup-form div {
+  margin-top: 1rem;
+  color: var(--primary-color);
+}
+
+.button-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+.button {
+  display: inline-block;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  color: #fff;
+  background-color: #214559;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #fff;
+  color: #214559;
+  transform: scale(1.1);
+}

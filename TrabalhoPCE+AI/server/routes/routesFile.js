@@ -9,9 +9,6 @@ var messageFHIRController = require ('../controller/messageFHIR');
 
 module.exports = router;
 
-
-
-// Set up middleware
 router.use(bodyParser.json());
 
 router.post('/login', async (req, res) => {
@@ -27,7 +24,6 @@ router.post('/login', async (req, res) => {
     res.status(401).json({ success: false, info: 'Invalid email or password.' });
   }
 });
-
 
 
 router.post('/signIn', async (req, res) => {
@@ -137,6 +133,15 @@ router.get("/mensagem/:id", async (req, res) => {
     
   });
 
+  router.get("/mensagemcomposition/:id", async (req, res) => {
+    identificador= req.params.id;
+    let jsonByIdResponse = await CompositionController.getJsonById(identificador);
+    if(!jsonByIdResponse.success) throw "Erro a obter a mensagem FHIR";
+    else
+      res.status(200).json({ success: true, info: "Mensagem recolhida com sucesso", data: jsonByIdResponse});
+      
+    });
+  
   router.delete("/delete/:id", async (req, res) => {
     identificador= req.params.id;
     let deletemsg = await messageFHIRController.deleteMensagem(identificador);
