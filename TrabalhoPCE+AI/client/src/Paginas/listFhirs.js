@@ -54,6 +54,9 @@ function ListaFhirs() {
   return (
     <div>
       <Navbar/>
+      <br></br>
+      <br></br>
+      <br></br>
     <div className='lista-fhirs-container'>
       <h1 className='title'>Lista das Mensagens FHIR:</h1>
       <div className='filter-container'>
